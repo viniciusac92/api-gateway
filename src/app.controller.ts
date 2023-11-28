@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Logger, Post, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Get, Logger, Post, Query, UsePipes, ValidationPipe } from '@nestjs/common';
 import {
   ClientProxy,
   ClientProxyFactory,
@@ -6,6 +6,7 @@ import {
   Transport,
 } from '@nestjs/microservices';
 import { CriarCategoriaDto } from './dtos/criar-categoria.dto';
+import { Observable } from 'rxjs';
 
 @Controller('api/v1')
 export class AppController {
@@ -36,7 +37,14 @@ export class AppController {
     await this.clientAdminBackend.connect();
 
     // routing key: vinicius-criar-categoria
-    return this.clientAdminBackend.emit('vinicius-criar-categoria', criarCategoriaDto)
+    this.clientAdminBackend.emit('vinicius-criar-categoria', criarCategoriaDto)
+  }
+
+  @Get('categorias')
+  consultarCategorias(@Query('idCategoria') _id: string): Observable<any> {
+
+    // routing key: vinicius-consultar-categorias
+    return this.clientAdminBackend.send('vinicius-consultar-categorias', _id ? _id : '')
 
   }
 }
