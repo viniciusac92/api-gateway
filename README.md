@@ -15,6 +15,8 @@ This project acts as a Gateway, providing a centralized point to manage and rout
 
 ## Iniciando
 
+Este API Gateway foi configurado para ser executado na porta 3000. Certifique-se de que essa porta esteja disponível e não esteja sendo utilizada por outros serviços no ambiente.
+
 ### Pré-requisitos
 
 - Node.js and npm instalados
