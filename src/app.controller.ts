@@ -18,9 +18,9 @@ export class AppController {
       transport: Transport.RMQ,
       options: {
         urls: ['amqp://localhost:5672'],
-        queue: 'admin-backend',
+        queue: 'categorias-fifo',
         queueOptions: {
-          durable: false,
+          durable: true,
         },
       },
     });
@@ -35,7 +35,8 @@ export class AppController {
   ) {
     await this.clientAdminBackend.connect();
 
-    return await this.clientAdminBackend.emit('vinicius-criar-categoria', criarCategoriaDto)
+    // routing key: vinicius-criar-categoria
+    return this.clientAdminBackend.emit('vinicius-criar-categoria', criarCategoriaDto)
 
   }
 }

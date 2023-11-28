@@ -36,7 +36,7 @@ Certifique-se de executar este comando antes de iniciar o API Gateway e quaisque
 
 Assim que o contêiner RabbitMQ estiver em execução, você pode acessar o console de gerenciamento navegando até http://localhost:8080 em seu navegador.
 
-## Installation
+## Instalação
 
 ```bash
 $ npm install
@@ -54,6 +54,12 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Serviços
+
+- link
+- link
+- link
 
 
 
