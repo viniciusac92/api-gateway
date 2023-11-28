@@ -60,8 +60,7 @@ $ npm run start:prod
 ## Serviços Gerenciados
 
 - Cadastro de categorias de jogadores: https://github.com/viniciusac92/microsservice-categorias
-- link
-- link
+
 
 
 
