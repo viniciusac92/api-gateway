@@ -1,0 +1,150 @@
+_type: export
+__export_format: 4
+__export_date: 2023-11-30T18:43:45.171Z
+__export_source: insomnia.desktop.app:v2022.7.5
+resources:
+  - _id: req_e477c668ea5a43dca6a63aee30b96380
+    parentId: fld_cddacd6c2d8c41b1ab2eef27c34c4ccf
+    modified: 1701369567818
+    created: 1701369567818
+    url: http://localhost:3000/api/v1/categorias
+    name: Criar Categoria
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"categoria": "1",
+        	"descricao": "Categoria 1",
+        	"eventos": [
+        		{
+        			"nome": "VITORIA",
+        			"operacao": "+",
+        			"valor": 30
+        		},
+        		{
+        			"nome": "VITORIA_LIDER",
+        			"operacao": "+",
+        			"valor": 50
+        		},
+        		{
+        			"nome": "DERROTA",
+        			"operacao": "+",
+        			"valor": 30
+        		}
+        	]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1696327423132.9062
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_cddacd6c2d8c41b1ab2eef27c34c4ccf
+    parentId: fld_503520395d4e4997a4053d7fc87ae5ba
+    modified: 1701369567817
+    created: 1701369567817
+    name: api-gateway requests
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1700280082515
+    _type: request_group
+  - _id: fld_503520395d4e4997a4053d7fc87ae5ba
+    parentId: wrk_82f90897b6b04a4bb68de32274fc3c9d
+    modified: 1698280782253
+    created: 1698280778555
+    name: requests
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1685044352057
+    _type: request_group
+  - _id: wrk_82f90897b6b04a4bb68de32274fc3c9d
+    parentId: null
+    modified: 1689098846020
+    created: 1681152152642
+    name: New Document
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_b6e09a26e0f94f0985970b7fe59a5fcd
+    parentId: fld_cddacd6c2d8c41b1ab2eef27c34c4ccf
+    modified: 1701369567824
+    created: 1701369567824
+    url: http://localhost:3000/api/v1/categorias
+    name: Consultar Categorias
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1696013490074.8555
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_039179d5ce14bc154d67f2eb4a66b24a554e72db
+    parentId: wrk_82f90897b6b04a4bb68de32274fc3c9d
+    modified: 1681152152645
+    created: 1681152152645
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1681152152645
+    _type: environment
+  - _id: jar_039179d5ce14bc154d67f2eb4a66b24a554e72db
+    parentId: wrk_82f90897b6b04a4bb68de32274fc3c9d
+    modified: 1681152152646
+    created: 1681152152646
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_e50b0c5206dc4408b3f52f326898dc57
+    parentId: wrk_82f90897b6b04a4bb68de32274fc3c9d
+    modified: 1701369351547
+    created: 1681152152642
+    fileName: New Document
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_dbb36f31970140dd8734b3787560a1ee
+    parentId: wrk_82f90897b6b04a4bb68de32274fc3c9d
+    modified: 1681152152650
+    created: 1681152152650
+    name: Example Test Suite
+    _type: unit_test_suite
+  - _id: env_1d1043d5eaef44978f3744beed661db1
+    parentId: env_039179d5ce14bc154d67f2eb4a66b24a554e72db
+    modified: 1698280728000
+    created: 1698280696283
+    name: testes_nest
+    data:
+      url: http://localhost:3000
+    dataPropertyOrder:
+      "&":
+        - url
+    color: null
+    isPrivate: false
+    metaSortKey: 1698280696283
+    _type: environment

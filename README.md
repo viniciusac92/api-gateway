@@ -65,6 +65,10 @@ $ npm run start:prod
 
 
 
+## Endpoints para utilização
+
+- Arquivo .yaml em anexo.
+
 ## License
 
 Nest is [MIT licensed](LICENSE).
